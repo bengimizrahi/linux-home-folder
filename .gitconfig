@@ -1,0 +1,11 @@
+[user]
+	name = Bengi Mizrahi
+	email = bengi.mizrahi@argela.com.tr
+[alias]
+	l = log --graph --all --decorate --oneline
+	a = add
+	b = branch
+	s = status
+	m = merge
+	c = checkout
+	r = reset
