@@ -57,9 +57,9 @@ if [ -n "$force_color_prompt" ]; then
 fi
 
 if [ "$color_prompt" = yes ]; then
-    PS1='${debian_chroot:+($debian_chroot)}\[\033[01;32m\]\u@\h\[\033[00m\]:\[\033[01;34m\]\w\[\033[00m\]$(__git_ps1)$ '
+    PS1='argela \[\033[1;35m\]\h\[\033[1;33m\] \w\[\033[00m\]:$(__git_ps1 "(%s)") '
 else
-    PS1='${debian_chroot:+($debian_chroot)}\u@\h:\w$(__git_ps1)$ '
+    PS1='argela \[\033[1;35m\]\u\[\033[1;33m\] \w\[\033[00m\]:$(__git_ps1 "(%s)") '
 fi
 unset color_prompt force_color_prompt
 
@@ -88,9 +88,11 @@ fi
 alias ll='ls -alF'
 alias la='ls -A'
 alias l='ls -CF'
+alias n='nautilus .'
 
 # Add an "alert" alias for long running commands.  Use like so:
 #   sleep 10; alert
+alias arpscan='sudo arp-scan -l'
 alias alert='notify-send --urgency=low -i "$([ $? = 0 ] && echo terminal || echo error)" "$(history|tail -n1|sed -e '\''s/^\s*[0-9]\+\s*//;s/[;&|]\s*alert$//'\'')"'
 
 # Alias definitions.
